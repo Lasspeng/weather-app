@@ -11,14 +11,14 @@ async function getCoordinates(city) {
   }
 }
 
-export async function getWeather(city) {
+export async function getWeather(city, unit) {
   try {
-    const cityCoordinates =  await getCoordinates(city);
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${cityCoordinates.lat}&lon=${cityCoordinates.lon}&appid=fe0d6601550dc3ccb9230eeb1ec7582c&units=imperial`, {mode: 'cors'});
+    const cityCoordinates =  await getCoordinates(city, unit);
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${cityCoordinates.lat}&lon=${cityCoordinates.lon}&appid=fe0d6601550dc3ccb9230eeb1ec7582c&units=${unit}`, {mode: 'cors'});
     const cityData = await response.json();
     const weather = {
       city: cityData.name,
-      weatherType: cityData.weather[0].main,
+      weatherType: cityData.weather[0].description,
       temperature: cityData.main.temp,
       feelsLike: cityData.main.feels_like
     }

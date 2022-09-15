@@ -12,11 +12,14 @@
   <div class='container'>
     <h1>Weather App</h1>
     <form id='form'>
-      <label for='city'>Name of city:</label>
-      <input type='text' id='city' name='city'>
-      <button type='submit'>Get Weather</button>
+      <label for='city'></label>
+      <input type='text' id='city' name='city' placeholder='Enter a city name'>
+      <button class='submitter' type='submit'>Get Weather</button>
     </form>
-    <div class='weather-display'></div>
+    <div class='weather-display-container'>
+      <button class='change-units'>Celsius</button>
+      <div class='weather-display'></div>
+    </div>
   </div>
 </body>
 </html>

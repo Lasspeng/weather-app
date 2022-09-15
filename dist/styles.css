@@ -14,12 +14,52 @@ body {
   text-align: center;
 }
 
-h1 {
-  margin: 0 0 30px 0;
-  font-size: 50px;
+button {
+  border-radius: 10px;
+  border: 4px double #cccccc;
+  text-align: center;
+  cursor: pointer;
+  background-color: hsl(200, 100%, 50%, .7);
 }
 
-.weather-display {
+input {
+  box-shadow: hsl(200, 100%, 50%, .7);
+  border: 0;
+  border-radius: 10px;
+  height: 20px;
+  width: fit-content;
+
+}
+
+h1 {
+  margin: 0 0 30px 0;
+  font-size: 75px;
+}
+
+h2 {
+  font-size: 50px;
+  margin-top: 30px;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+.weather-display-container {
+  display: none;
   position: relative;
   top: 300px;
+  background-color: hsl(200, 100%, 50%, .7);
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px 15px;
+  box-shadow: 0 0 15px 0 hsl(200, 100%, 50%, .7);
+  border-radius: 20px;
+}
+
+.change-units {
+  margin-top: 10px;
 }
